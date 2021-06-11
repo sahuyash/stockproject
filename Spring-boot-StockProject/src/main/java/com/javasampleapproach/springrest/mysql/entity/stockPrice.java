@@ -1,4 +1,4 @@
-package com.javasampleapproach.springrest.mysql.model;
+package com.javasampleapproach.springrest.mysql.entity;
 
 import java.sql.Time;
 import java.util.Date;
