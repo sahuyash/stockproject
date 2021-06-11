@@ -1,0 +1,7 @@
+com/stockproject/mysql/entity/stockExchange.class
+com/stockproject/mysql/entity/ipo.class
+com/stockproject/mysql/entity/stockPrice.class
+com/stockproject/mysql/entity/userdb.class
+com/stockproject/mysql/SpringRestMySqlApplication.class
+com/stockproject/mysql/entity/companyentity.class
+com/stockproject/mysql/entity/Sector.class

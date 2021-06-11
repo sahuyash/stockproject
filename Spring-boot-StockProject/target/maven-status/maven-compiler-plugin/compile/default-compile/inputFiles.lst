@@ -1,7 +1,7 @@
 /home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/Sector.java
-/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/Company.java
 /home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/stockExchange.java
 /home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/SpringRestMySqlApplication.java
-/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/UserDB.java
+/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/companyentity.java
 /home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/ipo.java
 /home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/stockPrice.java
+/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/userdb.java
