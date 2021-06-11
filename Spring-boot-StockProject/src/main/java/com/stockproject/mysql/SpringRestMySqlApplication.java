@@ -21,7 +21,7 @@ public class SpringRestMySqlApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		String sql="insert into stockproject.sectordb (id,brief,sector_name) values (?,?,?)";
-		int result= jdbcTemplate.update(sql,19,"pharma","xyz");
+		int result= jdbcTemplate.update(sql,20,"harshit","dasd");
 		if(result>0) {
 			System.out.println("Row inserted");
 		}
