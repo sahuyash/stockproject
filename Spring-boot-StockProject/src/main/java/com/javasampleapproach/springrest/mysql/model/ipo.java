@@ -14,23 +14,35 @@ public class ipo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-    @Column(name="Company Name")
+    @Column(name="Company_Name")
     private String companyName;	
-    @Column(name="Stock Exchange")
+    @Column(name="Stock_Exchange")
     private int stockExchange;
-    @Column(name="Price Per Share")
-    private int pricePerShare;
-    @Column(name=" Total number of Shares")
+    @Column(name="Price_Per_Share")
+    private double pricePerShare;
+    public ipo(long id, String companyName, int stockExchange, double pricePerShare, int totalShares, String datetime,
+			String remarks) {
+		super();
+		this.id = id;
+		this.companyName = companyName;
+		this.stockExchange = stockExchange;
+		this.pricePerShare = pricePerShare;
+		this.totalShares = totalShares;
+		this.datetime = datetime;
+		this.remarks = remarks;
+	}
+	@Column(name=" Total number of Shares")
     private int totalShares;
     @Column(name="Open Date Time")
     private String datetime;
     @Column(name="Remarks")
     private String remarks;
-	
-    public long getId() {
+	public long getId() {
 		return id;
 	}
-
+	public void setId(long id) {
+		this.id = id;
+	}
 	public String getCompanyName() {
 		return companyName;
 	}
@@ -43,10 +55,10 @@ public class ipo {
 	public void setStockExchange(int stockExchange) {
 		this.stockExchange = stockExchange;
 	}
-	public int getPricePerShare() {
+	public double getPricePerShare() {
 		return pricePerShare;
 	}
-	public void setPricePerShare(int pricePerShare) {
+	public void setPricePerShare(double pricePerShare) {
 		this.pricePerShare = pricePerShare;
 	}
 	public int getTotalShares() {
@@ -67,17 +79,8 @@ public class ipo {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
-	public ipo(String id, String companyName, int stockExchange, int pricePerShare, int totalShares, String datetime,
-			String remarks) {
-		super();
-		this.companyName = companyName;
-		this.stockExchange = stockExchange;
-		this.pricePerShare = pricePerShare;
-		this.totalShares = totalShares;
-		this.datetime = datetime;
-		this.remarks = remarks;
-	}
-    
+	
+
     
     	
 	

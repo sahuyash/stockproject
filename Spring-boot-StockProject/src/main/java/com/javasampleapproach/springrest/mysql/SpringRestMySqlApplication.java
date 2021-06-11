@@ -8,6 +8,6 @@ public class SpringRestMySqlApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringRestMySqlApplication.class, args);
-		System.out.println("in main");
+		//System.out.println("in main");
 	}
 }

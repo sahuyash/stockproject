@@ -9,14 +9,13 @@ import javax.persistence.Table;
 public class Company {
     
 	
-	@Column(name="Company Name")
+	@Column(name="Company_Name")
 	private String companyName;
-	
 	@Column(name="Turnover")
-	private long turnover;
+	private double turnover;
 	@Column(name="CEO")
 	private String ceo;
-	@Column(name="Board of Director")
+	@Column(name="Board_of_Director")
 	private String bod;
 	@Column(name="sector")
 	private String sector;
@@ -28,21 +27,11 @@ public class Company {
 	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
 	}
-	public long getTurnover() {
+	public double getTurnover() {
 		return turnover;
 	}
-	public void setTurnover(long turnover) {
+	public void setTurnover(double turnover) {
 		this.turnover = turnover;
-	}
-
-	public Company(String companyName, long turnover, String ceo, String bod, String sector, String briefDescription) {
-		super();
-		this.companyName = companyName;
-		this.turnover = turnover;
-		this.ceo = ceo;
-		this.bod = bod;
-		this.sector = sector;
-		this.briefDescription = briefDescription;
 	}
 	public String getCeo() {
 		return ceo;
@@ -68,7 +57,15 @@ public class Company {
 	public void setBriefDescription(String briefDescription) {
 		this.briefDescription = briefDescription;
 	}
-	
-	
+	public Company(String companyName, double turnover, String ceo, String bod, String sector,
+			String briefDescription) {
+		super();
+		this.companyName = companyName;
+		this.turnover = turnover;
+		this.ceo = ceo;
+		this.bod = bod;
+		this.sector = sector;
+		this.briefDescription = briefDescription;
+	}	
 	
 }

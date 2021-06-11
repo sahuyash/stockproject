@@ -11,20 +11,24 @@ import javax.persistence.Table;
 @Table(name="Stock Price")
 public class stockPrice {
     
-	@Column(name="Company Code")
-	private String companyCode;
-	@Column(name="Stock Exchange")
+	@Column(name="Company_Code")
+	private int companyCode;
+	@Column(name="Stock_Exchange")
 	private int stockExchange;
-	@Column(name="Current Price")
+	@Column(name="Current_Price")
 	private double currentPrice;
-	@Column(name="Date")
-	private Date date;
-	@Column(name="Time")
-	private Time time;
-	public String getCompanyCode() {
+	public stockPrice(int companyCode, int stockExchange, double currentPrice, Date date, Time time) {
+		super();
+		this.companyCode = companyCode;
+		this.stockExchange = stockExchange;
+		this.currentPrice = currentPrice;
+		this.date = date;
+		this.time = time;
+	}
+	public int getCompanyCode() {
 		return companyCode;
 	}
-	public void setCompanyCode(String companyCode) {
+	public void setCompanyCode(int companyCode) {
 		this.companyCode = companyCode;
 	}
 	public int getStockExchange() {
@@ -51,14 +55,11 @@ public class stockPrice {
 	public void setTime(Time time) {
 		this.time = time;
 	}
-	public stockPrice(String companyCode, int stockExchange, double currentPrice, Date date, Time time) {
-		super();
-		this.companyCode = companyCode;
-		this.stockExchange = stockExchange;
-		this.currentPrice = currentPrice;
-		this.date = date;
-		this.time = time;
-	}
+	@Column(name="Date")
+	private Date date;
+	@Column(name="Time")
+	private Time time;
+	
 
 	
 	

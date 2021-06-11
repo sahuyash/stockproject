@@ -2,31 +2,29 @@ package com.javasampleapproach.springrest.mysql.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="sector")
 public class Sector {
-  @Column(name="ID")
-	private String id;
-  @Column(name="Sector Name")
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+  @Column(name="Sector_Name")
 	private String sectorName;
   @Column(name="Brief")
 	private String brief;
-public String getId() {
+public long getId() {
 	return id;
 }
-public void setId(String id) {
+public void setId(long id) {
 	this.id = id;
 }
 public String getSectorName() {
 	return sectorName;
-}
-public Sector(String id, String sectorName, String brief) {
-	super();
-	this.id = id;
-	this.sectorName = sectorName;
-	this.brief = brief;
 }
 public void setSectorName(String sectorName) {
 	this.sectorName = sectorName;
@@ -37,5 +35,12 @@ public String getBrief() {
 public void setBrief(String brief) {
 	this.brief = brief;
 }
+public Sector(long id, String sectorName, String brief) {
+	super();
+	this.id = id;
+	this.sectorName = sectorName;
+	this.brief = brief;
+}
+  
 	
 }
