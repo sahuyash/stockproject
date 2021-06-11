@@ -2,17 +2,28 @@ package com.stockproject.mysql.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Company")
+@Table(name="Companydb")
 public class Company {
     
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 	@Column(name="Company_Name")
 	private String companyName;
 	@Column(name="Turnover")
 	private double turnover;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 	@Column(name="CEO")
 	private String ceo;
 	@Column(name="Board_of_Director")

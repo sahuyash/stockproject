@@ -1,7 +1,7 @@
-/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/javasampleapproach/springrest/mysql/model/stockExchange.java
-/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/javasampleapproach/springrest/mysql/model/UserDB.java
-/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/javasampleapproach/springrest/mysql/SpringRestMySqlApplication.java
-/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/javasampleapproach/springrest/mysql/model/Sector.java
-/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/javasampleapproach/springrest/mysql/model/stockPrice.java
-/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/javasampleapproach/springrest/mysql/model/ipo.java
-/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/javasampleapproach/springrest/mysql/model/Company.java
+/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/Sector.java
+/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/Company.java
+/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/stockExchange.java
+/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/SpringRestMySqlApplication.java
+/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/UserDB.java
+/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/ipo.java
+/home/yash/git/stockproject/Spring-boot-StockProject/src/main/java/com/stockproject/mysql/entity/stockPrice.java

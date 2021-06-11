@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="IPO")
+@Table(name="IPOdb")
 public class ipo {
     
 	@Id

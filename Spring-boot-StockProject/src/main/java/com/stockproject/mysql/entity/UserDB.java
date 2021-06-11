@@ -8,11 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="UserDB")
+@Table(name="Userdb")
 public class UserDB {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	
 	@Column(name="User Name")
 	private String userName;
 	@Column(name="Password")
