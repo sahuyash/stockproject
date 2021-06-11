@@ -12,8 +12,8 @@ import javax.persistence.Table;
 public class UserDB {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="id")
 	private long id;
-	
 	@Column(name="User Name")
 	private String userName;
 	@Column(name="Password")

@@ -8,11 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Companydb")
+@Table(name="companydb")
 public class Company {
     
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="id")
 	private long id;
 	@Column(name="Company_Name")
 	private String companyName;
