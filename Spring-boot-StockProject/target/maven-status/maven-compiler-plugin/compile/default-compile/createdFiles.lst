@@ -1,7 +1,6 @@
+com/stockproject/entity/companyentity.class
 com/stockproject/entity/ipo.class
-com/stockproject/SpringRestApplication.class
 com/stockproject/entity/stockExchange.class
 com/stockproject/entity/Sector.class
 com/stockproject/entity/stockPrice.class
-com/stockproject/entity/companyentity.class
 com/stockproject/entity/userdb.class

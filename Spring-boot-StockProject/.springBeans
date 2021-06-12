@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.stockproject.SpringRestApplication</config>
+		<config>java:com.stockproject.app.SpringRestApplication</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
