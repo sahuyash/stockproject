@@ -1,7 +1,9 @@
 package com.stockproject.app;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class SpringRestApplication {
@@ -11,6 +13,12 @@ public class SpringRestApplication {
 		SpringApplication.run(SpringRestApplication.class, args);
 		System.out.println("out main");
 	}
+	
+	@Bean
+    public ModelMapper modelMapper()
+    {
+        return new ModelMapper();
+    }
 
 //@Override
 	/// public void run(String... args) throws Exception {

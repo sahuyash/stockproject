@@ -15,6 +15,10 @@ import javax.persistence.Table;
 @Table(name="Stock_Pricedb")
 public class stockPriceEntity {
     
+	public stockPriceEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;

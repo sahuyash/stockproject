@@ -16,6 +16,11 @@ import javax.persistence.Table;
 @Table(name="ipodbc")
 public class ipoEntity {
 
+	public ipoEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;

@@ -16,6 +16,10 @@ import javax.persistence.Table;
 @Table(name="Stock_Exchangedb")
 public class stockExchangeEntity {
   
+	public stockExchangeEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "stock_exchange_id")

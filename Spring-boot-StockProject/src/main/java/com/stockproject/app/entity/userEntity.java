@@ -10,6 +10,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name="userinfo")
 public class userEntity {
+	public userEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;

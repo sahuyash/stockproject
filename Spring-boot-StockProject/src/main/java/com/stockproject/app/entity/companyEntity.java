@@ -17,10 +17,32 @@ import javax.persistence.Table;
 @Table(name = "company")
 public class companyEntity {
 
+	public companyEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
 	private long id;
+	public String getCompanyId() {
+		return companyId;
+	}
+
+	public void setCompanyId(String companyId) {
+		this.companyId = companyId;
+	}
+
+	public ipoEntity getIporel() {
+		return iporel;
+	}
+
+	public void setIporel(ipoEntity iporel) {
+		this.iporel = iporel;
+	}
+
+	@Column(name = "company_id")
+	private String companyId;
 	@Column(name = "Company_Name")
 	private String companyName;
 	@Column(name = "Turnover")
