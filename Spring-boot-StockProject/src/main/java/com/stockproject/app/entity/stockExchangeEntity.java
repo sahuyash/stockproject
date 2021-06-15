@@ -26,6 +26,8 @@ public class stockExchangeEntity {
 	private long id;
 	@Column(name="Stock_Exchange")
 	private int stockExchange;
+	@Column(name="stockExchnageName")
+	private String stockExchangeName;
 	@Column(name="Brief")
 	private String brief;
 	@Column(name="Contact_Address")
@@ -38,6 +40,20 @@ public class stockExchangeEntity {
 	private List<ipoEntity> ipos= new ArrayList<ipoEntity>();
 	@OneToMany
 	private List<stockPriceEntity> stockPrices=new ArrayList<stockPriceEntity>();
+	public stockExchangeEntity(long id, int stockExchange, String stockExchangeName, String brief,
+			String contactAddress, String remarks, List<companyEntity> companies, List<ipoEntity> ipos,
+			List<stockPriceEntity> stockPrices) {
+		super();
+		this.id = id;
+		this.stockExchange = stockExchange;
+		this.stockExchangeName = stockExchangeName;
+		this.brief = brief;
+		this.contactAddress = contactAddress;
+		Remarks = remarks;
+		this.companies = companies;
+		this.ipos = ipos;
+		this.stockPrices = stockPrices;
+	}
 	public long getId() {
 		return id;
 	}
@@ -49,6 +65,12 @@ public class stockExchangeEntity {
 	}
 	public void setStockExchange(int stockExchange) {
 		this.stockExchange = stockExchange;
+	}
+	public String getStockExchangeName() {
+		return stockExchangeName;
+	}
+	public void setStockExchangeName(String stockExchangeName) {
+		this.stockExchangeName = stockExchangeName;
 	}
 	public String getBrief() {
 		return brief;
@@ -68,18 +90,6 @@ public class stockExchangeEntity {
 	public void setRemarks(String remarks) {
 		Remarks = remarks;
 	}
-	public stockExchangeEntity(long id, int stockExchange, String brief, String contactAddress, String remarks,
-			List<companyEntity> companies, List<ipoEntity> ipos, List<stockPriceEntity> stockPrices) {
-		super();
-		this.id = id;
-		this.stockExchange = stockExchange;
-		this.brief = brief;
-		this.contactAddress = contactAddress;
-		Remarks = remarks;
-		this.companies = companies;
-		this.ipos = ipos;
-		this.stockPrices = stockPrices;
-	}
 	public List<companyEntity> getCompanies() {
 		return companies;
 	}
@@ -98,7 +108,6 @@ public class stockExchangeEntity {
 	public void setStockPrices(List<stockPriceEntity> stockPrices) {
 		this.stockPrices = stockPrices;
 	}
-	
 	
 	
 	
