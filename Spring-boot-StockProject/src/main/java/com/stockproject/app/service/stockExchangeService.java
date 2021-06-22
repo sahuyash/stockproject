@@ -1,5 +1,6 @@
 package com.stockproject.app.service;
 
+
 import java.lang.reflect.Type;
 import java.util.List;
 
@@ -32,8 +33,9 @@ public class stockExchangeService {
 		 return modelMapper.map(stockExchanges,listType);
 	}
 	@Transactional
-	public stockexchangeDto addStockExchange(stockExchangeEntity stockExchange) {
-		 modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-		 return modelMapper.map(stockExchangeRepo.save(stockExchange), stockexchangeDto.class);
+	public stockexchangeDto createStock(stockexchangeDto stockDto) {
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		stockExchangeEntity stock = stockExchangeRepo.save(modelMapper.map(stockDto, stockExchangeEntity.class));
+		return modelMapper.map(stock, stockexchangeDto.class);
 	}
 }

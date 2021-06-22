@@ -10,21 +10,22 @@ import lombok.NoArgsConstructor;
 public class stockexchangeDto {
 
      private long  stockExchangeId;
-     private int   stockExchange;
+     private String stockExchange;
 	 private String stockExchangeName;
 	 private String brief;
 	 private String contactAddress;
 	 private String remarks;
+	
 	public long getStockExchangeId() {
 		return stockExchangeId;
 	}
 	public void setStockExchangeId(long stockExchangeId) {
 		this.stockExchangeId = stockExchangeId;
 	}
-	public int getStockExchange() {
+	public String getStockExchange() {
 		return stockExchange;
 	}
-	public void setStockExchange(int stockExchange) {
+	public void setStockExchange(String stockExchange) {
 		this.stockExchange = stockExchange;
 	}
 	public String getStockExchangeName() {

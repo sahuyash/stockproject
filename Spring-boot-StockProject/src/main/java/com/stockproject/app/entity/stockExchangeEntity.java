@@ -25,8 +25,8 @@ public class stockExchangeEntity {
 	@Column(name = "stock_exchange_id")
 	private long id;
 	@Column(name="Stock_Exchange")
-	private int stockExchange;
-	@Column(name="stockExchnageName")
+	private String stockExchange;
+	@Column(name="stockExchangeName")
 	private String stockExchangeName;
 	@Column(name="Brief")
 	private String brief;
@@ -40,7 +40,7 @@ public class stockExchangeEntity {
 	private List<ipoEntity> ipos= new ArrayList<ipoEntity>();
 	@OneToMany
 	private List<stockPriceEntity> stockPrices=new ArrayList<stockPriceEntity>();
-	public stockExchangeEntity(long id, int stockExchange, String stockExchangeName, String brief,
+	public stockExchangeEntity(long id, String stockExchange, String stockExchangeName, String brief,
 			String contactAddress, String remarks, List<companyEntity> companies, List<ipoEntity> ipos,
 			List<stockPriceEntity> stockPrices) {
 		super();
@@ -60,10 +60,10 @@ public class stockExchangeEntity {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public int getStockExchange() {
+	public String getStockExchange() {
 		return stockExchange;
 	}
-	public void setStockExchange(int stockExchange) {
+	public void setStockExchange(String stockExchange) {
 		this.stockExchange = stockExchange;
 	}
 	public String getStockExchangeName() {

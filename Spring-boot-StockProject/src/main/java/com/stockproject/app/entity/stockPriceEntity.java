@@ -27,46 +27,55 @@ public class stockPriceEntity {
 	private int companyCode;
 	@ManyToOne
 	private companyEntity companyrel;
+	@Column(name="StockExchange")
+	private String stockExchange;
+	
 	@ManyToOne
-	private stockExchangeEntity stockExchange;
+	private stockExchangeEntity stockExchanges;
+
+	@Column(name="Current_Price")
+	private double currentPrice;
+	public stockPriceEntity(long id, int companyCode, companyEntity companyrel, String stockExchange,
+			stockExchangeEntity stockExchanges, double currentPrice, Date date, Time time) {
+		super();
+		this.id = id;
+		this.companyCode = companyCode;
+		this.companyrel = companyrel;
+		this.stockExchange = stockExchange;
+		this.stockExchanges = stockExchanges;
+		this.currentPrice = currentPrice;
+		this.date = date;
+		this.time = time;
+	}
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
-	@Column(name="Current_Price")
-	private double currentPrice;
-	
 	public int getCompanyCode() {
 		return companyCode;
 	}
 	public void setCompanyCode(int companyCode) {
 		this.companyCode = companyCode;
 	}
-
-	public companyEntity getCompany() {
+	public companyEntity getCompanyrel() {
 		return companyrel;
 	}
-	public void setCompany(companyEntity company) {
-		this.companyrel = company;
+	public void setCompanyrel(companyEntity companyrel) {
+		this.companyrel = companyrel;
 	}
-	public stockExchangeEntity getStockExchange() {
+	public String getStockExchange() {
 		return stockExchange;
 	}
-	public void setStockExchange(stockExchangeEntity stockExchange) {
+	public void setStockExchange(String stockExchange) {
 		this.stockExchange = stockExchange;
 	}
-	public stockPriceEntity(long id, int companyCode, companyEntity company, stockExchangeEntity stockExchange,
-			double currentPrice, Date date, Time time) {
-		super();
-		this.id = id;
-		this.companyCode = companyCode;
-		this.companyrel = company;
-		this.stockExchange = stockExchange;
-		this.currentPrice = currentPrice;
-		this.date = date;
-		this.time = time;
+	public stockExchangeEntity getStockExchanges() {
+		return stockExchanges;
+	}
+	public void setStockExchanges(stockExchangeEntity stockExchanges) {
+		this.stockExchanges = stockExchanges;
 	}
 	public double getCurrentPrice() {
 		return currentPrice;
@@ -86,9 +95,9 @@ public class stockPriceEntity {
 	public void setTime(Time time) {
 		this.time = time;
 	}
-	@Column(name="Date")
+	@Column(name="Date1")
 	private Date date;
-	@Column(name="Time")
+	@Column(name="Time1")
 	private Time time;
 	
 

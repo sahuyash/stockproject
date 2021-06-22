@@ -7,10 +7,10 @@ public class IPODto {
 
 	private String companyName;
 	private String stockExchange;
-	private float pricePerShare;
+	private double pricePerShare;
 	private Integer totalShares;
-	private Date date;
-	private Time time;
+	private String date;
+	private String time;
 	private String remarks;
 	public String getCompanyName() {
 		return companyName;
@@ -24,8 +24,11 @@ public class IPODto {
 	public void setStockExchange(String stockExchange) {
 		this.stockExchange = stockExchange;
 	}
-	public float getPricePerShare() {
+	public double getPricePerShare() {
 		return pricePerShare;
+	}
+	public void setPricePerShare(double pricePerShare) {
+		this.pricePerShare = pricePerShare;
 	}
 	public void setPricePerShare(float pricePerShare) {
 		this.pricePerShare = pricePerShare;
@@ -36,16 +39,16 @@ public class IPODto {
 	public void setTotalShares(Integer totalShares) {
 		this.totalShares = totalShares;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
-	public Time getTime() {
+	public String getTime() {
 		return time;
 	}
-	public void setTime(Time time) {
+	public void setTime(String time) {
 		this.time = time;
 	}
 	public String getRemarks() {

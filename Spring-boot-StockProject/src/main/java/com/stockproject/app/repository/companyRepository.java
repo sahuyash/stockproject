@@ -14,5 +14,6 @@ public interface companyRepository extends JpaRepository<companyEntity, Long> {
 
 	public Optional<companyEntity> findBycompanyId(String id);
 	public Optional<companyEntity> findBycompanyName(String name);
+	List<companyEntity> findByCompanyNameContaining(String pattern);
     
 }

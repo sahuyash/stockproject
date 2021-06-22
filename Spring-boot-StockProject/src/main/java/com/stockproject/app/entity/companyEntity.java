@@ -55,12 +55,22 @@ public class companyEntity {
 
 	@Column(name = "description")
 	private String briefDescription;
-	@OneToOne
-	private sectorEntity sector;
-	@ManyToMany
-	private List<stockExchangeEntity> stockExchanges=new ArrayList<stockExchangeEntity>();
+	private String sector;
+	//@OneToOne
+	//private sectorEntity sector;
 	@OneToMany(mappedBy="companyrel")
 	private List<stockPriceEntity> stockprices=new ArrayList<stockPriceEntity>();
+	public List<stockPriceEntity> getStockprices() {
+		return stockprices;
+	}
+
+	public void setStockprices(List<stockPriceEntity> stockprices) {
+		this.stockprices = stockprices;
+	}
+
+	@ManyToMany
+	private List<stockExchangeEntity> stockExchanges=new ArrayList<stockExchangeEntity>();
+	
 	@OneToOne
 	private ipoEntity iporel;
 
@@ -112,27 +122,28 @@ public class companyEntity {
 		this.briefDescription = briefDescription;
 	}
 
-	public companyEntity(long id, String companyName, double turnover, String ceo, String bod, String briefDescription,
-			sectorEntity sector, List<stockExchangeEntity> stockExchanges, List<stockPriceEntity> stockprices,
-			ipoEntity ipo) {
+	public companyEntity(long id, String companyId, String companyName, double turnover, String ceo, String bod,
+			String briefDescription, String sector, List<stockPriceEntity> stockprices,
+			List<stockExchangeEntity> stockExchanges, ipoEntity iporel) {
 		super();
 		this.id = id;
+		this.companyId = companyId;
 		this.companyName = companyName;
 		this.turnover = turnover;
 		this.ceo = ceo;
 		this.bod = bod;
 		this.briefDescription = briefDescription;
 		this.sector = sector;
-		this.stockExchanges = stockExchanges;
 		this.stockprices = stockprices;
-		this.iporel = ipo;
+		this.stockExchanges = stockExchanges;
+		this.iporel = iporel;
 	}
 
-	public sectorEntity getSector() {
+	public String getSector() {
 		return sector;
 	}
 
-	public void setSector(sectorEntity sector) {
+	public void setSector(String sector) {
 		this.sector = sector;
 	}
 
@@ -142,14 +153,6 @@ public class companyEntity {
 
 	public void setStockExchanges(List<stockExchangeEntity> stockExchanges) {
 		this.stockExchanges = stockExchanges;
-	}
-
-	public List<stockPriceEntity> getStockprices() {
-		return stockprices;
-	}
-
-	public void setStockprices(List<stockPriceEntity> stockprices) {
-		this.stockprices = stockprices;
 	}
 
 	public ipoEntity getIpo() {

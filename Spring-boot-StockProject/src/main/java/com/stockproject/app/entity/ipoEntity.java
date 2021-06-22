@@ -1,6 +1,8 @@
 package com.stockproject.app.entity;
 
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -36,8 +38,10 @@ public class ipoEntity {
 	
 	@Column(name="Total_number_of_Shares")
 	private int totalShares;
-	@Column(name="Open_Date_Time")
-	private String datetime;
+	@Column(name="Open_Date")
+	private String date;
+	@Column(name="Open_Time")
+	private String time;
 	@Column(name="Remarks")
 	private String remarks;
 
@@ -74,18 +78,7 @@ public class ipoEntity {
 		this.stockExchanges = stockExchanges;
 	}
 
-	public ipoEntity(long id, String companyName, double pricePerShare, companyEntity companyrel,
-			List<stockExchangeEntity> stockExchanges, int totalShares, String datetime, String remarks) {
-		super();
-		this.id = id;
-		this.companyName = companyName;
-		this.pricePerShare = pricePerShare;
-		this.companyrel = companyrel;
-		this.stockExchanges = stockExchanges;
-		this.totalShares = totalShares;
-		this.datetime = datetime;
-		this.remarks = remarks;
-	}
+
 
 	public double getPricePerShare() {
 		return pricePerShare;
@@ -103,12 +96,37 @@ public class ipoEntity {
 		this.totalShares = totalShares;
 	}
 
-	public String getDatetime() {
-		return datetime;
+
+
+
+	public ipoEntity(long id, String companyName, double pricePerShare, companyEntity companyrel,
+			List<stockExchangeEntity> stockExchanges, int totalShares, String date, String time, String remarks) {
+		super();
+		this.id = id;
+		this.companyName = companyName;
+		this.pricePerShare = pricePerShare;
+		this.companyrel = companyrel;
+		this.stockExchanges = stockExchanges;
+		this.totalShares = totalShares;
+		this.date = date;
+		this.time = time;
+		this.remarks = remarks;
 	}
 
-	public void setDatetime(String datetime) {
-		this.datetime = datetime;
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
 	}
 
 	public String getRemarks() {

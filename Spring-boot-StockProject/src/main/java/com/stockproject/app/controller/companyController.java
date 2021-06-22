@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +20,7 @@ import com.stockproject.app.service.companyService;
 
 @Controller
 @RequestMapping("/company")
+@CrossOrigin
 public class companyController {
     
 	@Autowired
@@ -44,6 +46,18 @@ public class companyController {
 		
 		return new ResponseEntity<> (companyService.findByCompanyName(name), HttpStatus.FOUND);
 	}
+	@GetMapping("/companies/findByPattern/{pattern}")
+	public ResponseEntity<List<companyDto>> searchCompany(@PathVariable("pattern") String pattern)
+	{
+		return new ResponseEntity<List<companyDto>> (companyService.searchByPattern(pattern), HttpStatus.OK);
+	}
+	
+	@GetMapping("/companies/{companyId}")
+	public ResponseEntity<companyDto> getCompanyByCompanyId(@PathVariable("companyId") String id){
+		
+		return new ResponseEntity<companyDto> (companyService.findCompanyById(id), HttpStatus.FOUND);
+	}
+	
 
 	//update the company by id
 	@PutMapping("/companies/{companyId}")

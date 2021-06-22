@@ -18,8 +18,8 @@ public class sectorEntity {
 	private String sectorName;
   @Column(name="Brief")
 	private String brief;
-  @OneToOne(mappedBy="sector")
-  private companyEntity companyrel;
+ // @OneToOne(mappedBy="sector")
+ // private companyEntity companyrel;
 public long getId() {
 	return id;
 }
@@ -38,19 +38,19 @@ public String getBrief() {
 public void setBrief(String brief) {
 	this.brief = brief;
 }
-public sectorEntity(long id, String sectorName, String brief, companyEntity companyrel) {
+public sectorEntity(long id, String sectorName, String brief) {
 	super();
 	this.id = id;
 	this.sectorName = sectorName;
 	this.brief = brief;
-	this.companyrel = companyrel;
+	
 }
-public companyEntity getCompanyrel() {
-	return companyrel;
-}
-public void setCompanyrel(companyEntity companyrel) {
-	this.companyrel = companyrel;
-}
+//public companyEntity getCompanyrel() {
+	//return companyrel;
+//}
+//public void setCompanyrel(companyEntity companyrel) {
+	//this.companyrel = companyrel;
+//}
 public sectorEntity() {
 	super();
 	// TODO Auto-generated constructor stub
